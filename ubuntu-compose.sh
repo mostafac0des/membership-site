@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # update
-sudo apt-get update
+apt-get update
 
 # install latest version of docker the lazy way
 curl -sSL https://get.docker.com | sh
