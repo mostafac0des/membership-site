@@ -5,10 +5,14 @@ name = "pypi"
 
 [packages]
 django = "*"
+django-allauth = "*"
+django-crispy-forms = "*"
 gunicorn = "*"
 "psycopg2-binary" = "*"
 
 [dev-packages]
+"autopep8" = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.7"
