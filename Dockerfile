@@ -14,9 +14,10 @@ RUN pip install pipenv
 COPY Pipfile /code/Pipfile
 RUN pipenv install --deploy --system --skip-lock --dev
 
+# Run deployment tasks
+COPY site/deploy-tasks.sh /code/
+RUN chmod +x deploy-tasks.sh
+CMD ["/bin/bash", "deploy-tasks.sh"]
+
 # Copy project
 COPY ./site /code/
-
-# Run deployment tasks
-RUN chmod +x deploy_tasks.sh
-CMD ["/bin/bash", "deploy_tasks.sh"]
