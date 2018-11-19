@@ -5,13 +5,13 @@
 curl -sSL https://get.docker.com | sh
 
 # add lets encrypt
-sudo add-apt-repository ppa:certbot/certbot
+# sudo add-apt-repository ppa:certbot/certbot
 
 # upgrade packages
 sudo apt update
 
 # install certbot
-sudo apt-get install python-certbot-nginx
+# sudo apt-get install python-certbot-nginx
 
 # make it so you don't need to sudo to run docker commands
 usermod -aG docker ubuntu
