@@ -10,9 +10,9 @@ services:
     restart: always
     env_file:
       - ./.env
-    command: gunicorn --bind 0.0.0.0:8080 djangox_project.wsgi
+    command: gunicorn --bind 0.0.0.0:8080 core.wsgi
     volumes:
-      - ./apps:/code
+      - ./site:/code
     ports:
       - "8080:8080"
     depends_on:
@@ -23,7 +23,7 @@ services:
     restart: always
     volumes:
       - ./etc/nginx/:/etc/nginx/conf.d
-      - ./apps/staticfiles:/code/static
+      - ./site/staticfiles:/code/static
     ports:
       - "80:80"
       - "443:443"
