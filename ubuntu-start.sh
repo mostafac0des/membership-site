@@ -10,11 +10,11 @@ curl -sSL https://get.docker.com | sh
 # upgrade packages
 sudo apt update
 
-# install certbot
-# sudo apt-get install python-certbot-nginx
-
 # make it so you don't need to sudo to run docker commands
-usermod -aG docker ubuntu
+# note: make sure to log out and back in to reflect
+sudo groupadd docker
+sudo usermod -aG docker ubuntu
+
 
 # install docker and docker-compose
 sudo apt install docker-compose
