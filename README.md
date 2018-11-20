@@ -2,6 +2,7 @@
 
 ### local:
 
+Use pipenv
 - `pipenv install`
 
 ### production:
