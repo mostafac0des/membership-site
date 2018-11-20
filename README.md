@@ -6,6 +6,6 @@
 
 ### production:
 
-- `sudo chmod u+x ubuntu-start.sh`
+- `cd membership-site && sudo chmod u+x ubuntu-start.sh`
 - `echo -e "yes\nyes\nyes" | ./ubuntu-start.sh`
 - `touch site/.env`
