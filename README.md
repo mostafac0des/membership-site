@@ -1,5 +1,9 @@
 # membership-site
 
+### local:
+
+- `pipenv install`
+
 ### production:
 
 - `sudo chmod u+x ubuntu-start.sh`
