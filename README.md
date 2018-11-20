@@ -2,5 +2,5 @@
 
 ### production:
 
-- `sudo chmod u+x ubuntu-compose.sh`
-- `echo -e "yes\nyes\nyes" | ./ubuntu-compose.sh`
+- `sudo chmod u+x ubuntu-start.sh`
+- `echo -e "yes\nyes\nyes" | ./ubuntu-start.sh`
