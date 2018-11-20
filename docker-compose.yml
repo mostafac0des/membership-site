@@ -9,7 +9,7 @@ services:
     build: .
     restart: always
     env_file:
-      - ./site/.env
+      - ./.env
     command: gunicorn --bind 0.0.0.0:8080 core.wsgi
     volumes:
       - ./site:/code

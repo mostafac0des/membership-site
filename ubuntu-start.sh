@@ -25,3 +25,6 @@ sudo ufw enable
 sudo ufw allow 80
 sudo ufw allow 443
 sudo ufw allow 'OpenSSH'
+
+# Create .env file
+cp etc/env.dist .env

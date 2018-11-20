@@ -2,8 +2,8 @@
 
 # Apply database migrations
 echo "Apply database migrations"
-python manage.py migrate
+sudo docker-compose run web ./manage.py migrate
 
 # Collect static files
 echo "Collect static files"
-python manage.py collectstatic --noinput
+sudo docker-compose run web ./manage.py collectstatic --noinput
