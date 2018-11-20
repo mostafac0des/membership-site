@@ -10,6 +10,7 @@ django-crispy-forms = "*"
 gunicorn = "*"
 "psycopg2-binary" = "*"
 django-environ = "*"
+whitenoise = "*"
 
 [dev-packages]
 "autopep8" = "*"
