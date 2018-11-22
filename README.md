@@ -3,7 +3,7 @@
 ### local:
 
 Use pipenv
-- `pipenv install`
+- `cd membership-site && pipenv install`
 
 ### production:
 
