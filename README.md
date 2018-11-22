@@ -7,7 +7,7 @@ A framework for launching new Django membership site quickly on to an Ubuntu 18.
 - Django 2.1 and Python 3.7
 - PostgreSQL database
 - Dockerized containers
-- NGINX and Gunicorn for production
+- *NGINX* and **Gunicorn** for production
 
 ## Setup:
 
