@@ -11,7 +11,7 @@ curl -sSL https://get.docker.com | sh
 sudo apt update
 
 # make it so you don't need to sudo to run docker commands
-# note: make sure to log out and back in to reflect
+# note: make sure to log out and log in back in to reflect
 sudo groupadd docker
 sudo usermod -aG docker ubuntu
 
@@ -27,4 +27,4 @@ sudo ufw allow 443
 sudo ufw allow 'OpenSSH'
 
 # Create .env file
-cp etc/env.dist .env
+cp etc/env.dist site/.env
