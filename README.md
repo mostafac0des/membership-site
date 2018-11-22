@@ -19,6 +19,7 @@ Use pipenv
 - `pipenv shell`
 - `./manage.py migrate`
 - `./manage.py collectstatic`
+- `./manage.py runserver`
 
 ### production:
 
