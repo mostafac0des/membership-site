@@ -17,6 +17,7 @@ A framework for launching new Django membership site quickly on to an **Ubuntu 1
 Use pipenv
 - `cd membership-site && pipenv install`
 - `pipenv shell`
+- `cd site`
 - `./manage.py migrate`
 - `./manage.py collectstatic`
 - `./manage.py runserver`
