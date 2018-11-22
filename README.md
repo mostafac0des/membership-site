@@ -15,4 +15,4 @@ steps to deploy to production:
 
 migrate & collectstatic
 - `sudo chmod u+x site/deploy-tasks.sh`
-- `./deploy-tasks.sh`
+- `./site/deploy-tasks.sh`
