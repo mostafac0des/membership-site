@@ -6,6 +6,7 @@ A framework for launching new Django membership site quickly on to an **Ubuntu 1
 
 - Django 2.1 and Python 3.7
 - PostgreSQL database
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
 - Dockerized containers
 - Environment variables
 - **NGINX** and **Gunicorn** for production
