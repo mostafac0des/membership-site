@@ -9,13 +9,13 @@ staging=0 #Set to 1 if you're just testing your setup to avoid hitting request l
 
 echo "### Preparing directories in $data_path ..."
 sudo rm -Rf "$data_path"
-sudo mkdir -p "$data_path/www"
-sudo mkdir -p "$data_path/conf/live/$domains"
+mkdir -p "$data_path/www"
+mkdir -p "$data_path/conf/live/$domains"
 
 
 echo "### Creating dummy certificate ..."
 path="/etc/letsencrypt/live/$domains"
-sudo mkdir -p "$path"
+mkdir -p "$path"
 docker-compose run --rm --entrypoint "\
     openssl req -x509 -nodes -newkey rsa:1024 -days 1\
       -keyout '$path/privkey.pem' \
@@ -24,8 +24,8 @@ docker-compose run --rm --entrypoint "\
 
 
 echo "### Downloading recommended HTTPS parameters ..."
-sudo curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/options-ssl-nginx.conf > "$data_path/conf/options-ssl-nginx.conf"
-sudo curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot/ssl-dhparams.pem > "$data_path/conf/ssl-dhparams.pem"
+curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/options-ssl-nginx.conf > "$data_path/conf/options-ssl-nginx.conf"
+curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot/ssl-dhparams.pem > "$data_path/conf/ssl-dhparams.pem"
 
 
 echo "### Starting nginx ..."
@@ -36,8 +36,8 @@ echo "### Deleting dummy certificate ..."
 sudo rm -Rf "$data_path/conf/live"
 
 echo "### Downloading recommended TLS options ..."
-sudo curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/options-ssl-nginx.conf > "$data_path/conf/options-ssl-nginx.conf"
-sudo curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot/ssl-dhparams.pem > "$data_path/conf/ssl-dhparams.pem"
+curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/options-ssl-nginx.conf > "$data_path/conf/options-ssl-nginx.conf"
+curl -s https://raw.githubusercontent.com/certbot/certbot/master/certbot/ssl-dhparams.pem > "$data_path/conf/ssl-dhparams.pem"
 
 
 echo "### Requesting initial certificate ..."
