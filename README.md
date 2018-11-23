@@ -28,7 +28,9 @@ Use pipenv
 steps to deploy to production:
 - `cd membership-site && sudo chmod u+x ubuntu-start.sh`
 - `echo -e "yes\nyes\nyes" | ./ubuntu-start.sh`
+
 **note: log out & back in to remove the need for sudo**
+
 - `cd membership-site`
 
 migrate & collectstatic
