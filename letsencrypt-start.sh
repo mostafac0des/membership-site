@@ -9,13 +9,13 @@ staging=0 #Set to 1 if you're just testing your setup to avoid hitting request l
 
 echo "### Preparing directories in $data_path ..."
 sudo rm -Rf "$data_path"
-mkdir -p "$data_path/www"
-mkdir -p "$data_path/conf/live/$domains"
+sudo mkdir -p "$data_path/www"
+sudo mkdir -p "$data_path/conf/live/$domains"
 
 
 echo "### Creating dummy certificate ..."
 path="/etc/letsencrypt/live/$domains"
-mkdir -p "$path"
+sudo mkdir -p "$path"
 docker-compose run --rm --entrypoint "\
     openssl req -x509 -nodes -newkey rsa:1024 -days 1\
       -keyout '$path/privkey.pem' \
