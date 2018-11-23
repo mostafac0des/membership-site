@@ -28,7 +28,8 @@ Use pipenv
 steps to deploy to production:
 - `cd membership-site && sudo chmod u+x ubuntu-start.sh`
 - `echo -e "yes\nyes\nyes" | ./ubuntu-start.sh`
-- log out & back in
+- **note: log out & back in to remove the need for sudo**
+- `cd membership-site`
 
 migrate & collectstatic
 - `sudo chmod u+x site/deploy-tasks.sh`
