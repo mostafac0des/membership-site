@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Build images
-echo "Bulding images.. "
-docker-compose build
-
 # Apply database migrations
 echo "Apply database migrations"
 docker-compose run web ./manage.py migrate
