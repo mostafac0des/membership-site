@@ -3,9 +3,11 @@ version: "3"
 services:
   db:
     image: postgres:10.1-alpine
+    container_name: postgres_db_1
     volumes:
       - postgres_data:/var/lib/postgresql/data/
   web:
+    container_name: django_web_1
     build: .
     restart: always
     env_file:
@@ -20,6 +22,7 @@ services:
       - db
   nginx:
     image: "nginx"
+    container_name: nginx_server_1
     restart: always
     volumes:
       - ./etc/nginx/:/etc/nginx/conf.d
