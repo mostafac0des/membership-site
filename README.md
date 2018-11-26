@@ -11,6 +11,18 @@ A framework for launching new Django membership site quickly on to an **Ubuntu 1
 - Environment variables
 - **NGINX** and **Gunicorn** for production
 
+## Required
+
+Get the right flavor of Docker for your OS...
+- [Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
+- [Docker for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
+
+**Note:** The minimum building requirement for deployment of this project is 4 GB RAM.
+For Docker for Mac, this can be set by following these steps:
+
+Open Docker > Preferences > Advanced tab, then set memory to 4.0 GiB
+
 ## Setup:
 
 ### local:
