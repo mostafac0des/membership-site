@@ -49,10 +49,14 @@ migrate & collectstatic
 - `sudo chmod u+x site/deploy-tasks.sh`
 - `./site/deploy-tasks.sh`
 
-run server
+run your web application
 - `docker-compose up --build -d`
 
 ### delete database data:
 
+search and delete volumes
 - `docker volume ls`
 - `docker volume rm <name_of_volume>`
+
+rebuild volumes and restart application
+- `docker-compose up --build -d`
