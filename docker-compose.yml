@@ -2,7 +2,7 @@ version: "3"
 
 services:
   db:
-    image: postgres:10.1-alpine
+    image: postgres:11.1-alpine
     container_name: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/
@@ -18,7 +18,6 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - nginx
       - db
   nginx:
     image: "nginx"
@@ -30,5 +29,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    links:
+      - web:web
 volumes:
   postgres_data:
