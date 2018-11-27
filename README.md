@@ -51,3 +51,7 @@ migrate & collectstatic
 
 run server
 - `docker-compose up --build -d`
+
+### delete database data
+- `docker volume ls`
+- `docker volume rm <name_of_volume>`
