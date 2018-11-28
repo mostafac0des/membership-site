@@ -37,7 +37,6 @@ run your web application locally
 
 ### Production:
 
-steps to deploy to production:
 - `cd membership-site && sudo chmod u+x ubuntu-start.sh`
 - `echo -e "yes\nyes\nyes" | ./ubuntu-start.sh`
 
