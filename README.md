@@ -25,17 +25,16 @@ Open Docker > Preferences > Advanced tab, then set memory to 4.0 GiB
 
 ## Setup:
 
-### local:
+### Local:
 
-Use pipenv
-- `cd membership-site && pipenv install`
-- `pipenv shell`
-- `cd site`
-- `./manage.py migrate`
-- `./manage.py collectstatic`
-- `./manage.py runserver`
+copy your environment variable file
+- `cp etc/env.dist site/.env`
+**note: set `DEBUG=True` and update as needed
 
-### production:
+run your web application locally
+- `docker-compose up --build -d`
+
+### Production:
 
 steps to deploy to production:
 - `cd membership-site && sudo chmod u+x ubuntu-start.sh`
@@ -45,14 +44,15 @@ steps to deploy to production:
 
 - `cd membership-site`
 
-migrate & collectstatic
-- `sudo chmod u+x site/deploy-tasks.sh`
-- `./site/deploy-tasks.sh`
-
 run your web application
 - `docker-compose up --build -d`
 
-### delete database data:
+### Migrate and collect static
+
+- `sudo chmod u+x site/deploy-tasks.sh`
+- `./site/deploy-tasks.sh`
+
+### Delete database data:
 
 search and delete volumes
 - `docker volume ls`
