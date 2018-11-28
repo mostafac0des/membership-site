@@ -30,7 +30,7 @@ Open Docker > Preferences > Advanced tab, then set memory to 4.0 GiB
 copy your environment variable file
 - `cp etc/env.dist site/.env`
 
-**note: set `DEBUG=True` and update as needed
+**note: set `DEBUG=True` and update as needed**
 
 run your web application locally
 - `docker-compose up --build -d`
