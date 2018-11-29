@@ -47,15 +47,6 @@ run your web application locally
 run your web application
 - `docker-compose up --build -d`
 
-### Migrate and collect static
-
-run tasks
-- `sudo chmod u+x site/deploy-tasks.sh`
-- `./site/deploy-tasks.sh`
-
-restart your web application
-- `docker-compose stop && docker-compose up -d`
-
 ### Delete database data:
 
 search and delete volumes

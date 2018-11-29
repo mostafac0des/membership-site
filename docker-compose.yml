@@ -8,16 +8,17 @@ services:
       - postgres_data:/var/lib/postgresql/data/
   web:
     container_name: web
-    build: .
+    build:
+      context: .
+      dockerfile: ./etc/Dockerfile
     restart: always
     env_file:
       - ./site/.env
-    command: gunicorn --bind 0.0.0.0:8080 core.wsgi
     volumes:
       - ./site:/code
     ports:
       - "8080:8080"
-    depends_on:
+    links:
       - db
   nginx:
     image: "nginx"
@@ -29,7 +30,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    links:
-      - web:web
+    depends_on:
+      - web
 volumes:
   postgres_data:

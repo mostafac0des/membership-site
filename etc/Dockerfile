@@ -17,6 +17,6 @@ RUN pip install -r requirements.txt
 COPY ./site /code/
 
 # Entrypoint
-COPY ./etc/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-RUN chmod a+x /usr/local/bin/docker-entrypoint.sh
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+COPY ./etc/deploy-tasks.sh /usr/local/bin/deploy-tasks.sh
+RUN chmod a+x /usr/local/bin/deploy-tasks.sh
+ENTRYPOINT ["/usr/local/bin/deploy-tasks.sh"]
