@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Wait for db container to run
-sleep 7s
+sleep 4s
 
 # Apply database migrations
 echo "Apply database migrations"

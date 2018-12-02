@@ -45,13 +45,29 @@ run your web application locally
 - `cd membership-site`
 
 run your web application
-- `docker-compose up --build -d`
+- `docker-compose -f production.yml up --build -d`
 
 ### Delete database data:
+
+stop containers
+- `docker-compose stop`
 
 search and delete volumes
 - `docker volume ls`
 - `docker volume rm <name_of_volume>`
 
 rebuild volumes and restart application
-- `docker-compose up --build -d`
+
+locally
+- `docker-compose up -d`
+
+production
+- `docker-compose up -f production.yml -d`
+
+### Enable Let's Encrypt SSL
+
+Add your domains and email addresses to `start-letsencrypt.sh`
+
+- `sudo chmod +x ./start-letsencrypt.sh`
+
+- `sudo ./start-letsencrypt.sh`

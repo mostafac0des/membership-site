@@ -7,3 +7,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('apps.pages.urls')),
 ]
+
+admin.site.site_header = 'Membership Site'
+admin.site.site_title = 'Membership Site'

@@ -157,6 +157,15 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+# Stripe & Braintree
+STRIPE_PUBLISHABLE_KEY = env('STRIPE_PUBLISHABLE_KEY', default='')
+STRIPE_SECRET_KEY = env('STRIPE_SECRET_KEY', default='')
+
+BT_ENVIRONMENT = env('BT_ENVIRONMENT', default='sandbox')
+BT_MERCHANT_ID = env('BT_MERCHANT_ID', default='')
+BT_PUBLIC_KEY = env('BT_PUBLIC_KEY', default='')
+BT_PRIVATE_KEY = env('BT_PRIVATE_KEY', default='')
+
 # Feature Switches
 FEATURE_SWITCHES = dict(
 )
