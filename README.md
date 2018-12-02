@@ -10,6 +10,7 @@ A framework for launching new Django membership site quickly on to an **Ubuntu 1
 - Dockerized containers
 - Environment variables
 - **NGINX** and **Gunicorn** for production
+- **Let's Encrypt** and **Certbot** to enable HTTPS
 
 ## Required
 
@@ -71,3 +72,5 @@ Add your domains and email addresses to `start-letsencrypt.sh`
 - `sudo chmod +x ./start-letsencrypt.sh`
 
 - `sudo ./start-letsencrypt.sh`
+
+Certbot will automatically check for renewals every 12 hours
