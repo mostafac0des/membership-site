@@ -1,6 +1,6 @@
 # membership-site
 
-A framework for launching new Django membership site quickly on to an **Ubuntu 18.04** LTS instance using [Amazon Lightsail](https://aws.amazon.com/lightsail/) or [Amazon EC2](https://aws.amazon.com/ec2/). Comes with a complete user authentication flow, custom user model, environment variables, and social authentication options via Gmail, Facebook, Twitter, etc.
+A framework for launching a new Django membership site quickly on to an **Ubuntu 18.04** LTS instance using [Amazon Lightsail](https://aws.amazon.com/lightsail/) or [Amazon EC2](https://aws.amazon.com/ec2/). Comes with a complete user authentication flow, custom user model, environment variables, and social authentication options via Gmail, Facebook, Twitter, etc.
 
 ## Features
 
